@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
+/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 14:27:50 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/09 16:35:25 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/05/16 16:43:30 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	PhoneBook::Search_Info(Contact list[8]){
 	return 1;
 }
 
-std::string	formatColumn(std::string str){
+std::string	 PhoneBook::formatColumn(std::string str){
 	if (str.size() > 10)
 		str = str.substr(0, 9) + ".";
 	return str;

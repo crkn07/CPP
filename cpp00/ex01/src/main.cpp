@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
+/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 17:50:35 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/09 14:47:11 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/05/16 16:38:06 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../PhoneBook.hpp"
+
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		i++;
+	return (((unsigned char)s1[i]) - ((unsigned char)s2[i]));
+}
 
 int	main(){
 	PhoneBook	phonebook;
@@ -29,7 +39,7 @@ int	main(){
 		std::cin >> str;
 		if (std::cin.eof())
 			return 1;
-		if (!strcmp(str.c_str(), "ADD")){
+		if (!ft_strcmp(str.c_str(), "ADD")){
 			if (i == 8)
 				i = 0;
 			if (elements < 9)
@@ -37,10 +47,10 @@ int	main(){
 			phonebook.New_Contact(i);
 			i++;
 		}
-		else if (!strcmp(str.c_str(), "SEARCH")){
+		else if (!ft_strcmp(str.c_str(), "SEARCH")){
 			phonebook.Search(elements);
 		}
-		else if (!strcmp(str.c_str(), "EXIT")){
+		else if (!ft_strcmp(str.c_str(), "EXIT")){
 			std::cout << "BYE!" <<std::endl;
 			break;
 		}

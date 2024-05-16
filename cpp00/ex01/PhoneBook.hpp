@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
+/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 15:17:51 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/09 16:36:51 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/05/16 16:43:50 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class PhoneBook{
 	void	New_Contact(int i);
 	int		Search_Info(Contact list[8]);
 	int		Search(int elements);
-	std::string	formatColumn(std::string str);
+	std::string	 formatColumn(std::string str);
 };
 
 #endif
