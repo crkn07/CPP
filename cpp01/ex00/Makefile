@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+         #
+#    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 18:49:09 by crtorres          #+#    #+#              #
-#    Updated: 2024/05/16 19:46:13 by cristiantor      ###   ########.fr        #
+#    Updated: 2024/05/28 12:03:30 by crtorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ SRC = main.cpp\
 	Zombie.cpp\
 	newZombie.cpp\
 	randomChump.cpp\
-
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 
@@ -51,11 +50,13 @@ $(NAME): $(OBJ)
 
 clean:
 	$(CYAN) "\n cleaning everything...\n" $(RESET)
-	@rm -f $(OBJ)
+	@rm -f $(OBJS)
+	@rm -rf $(DOT_O)
 
-fclean:
+fclean: clean
 	@clear
 	@rm -f $(NAME)
+	@rm -rf $(DOT_O)
 
 re: fclean all
 

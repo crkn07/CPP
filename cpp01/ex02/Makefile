@@ -6,50 +6,54 @@
 #    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/22 18:34:44 by crtorres          #+#    #+#              #
-#    Updated: 2024/02/22 18:35:38 by crtorres         ###   ########.fr        #
+#    Updated: 2024/05/28 15:58:41 by crtorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-name = string_manipulation
+NAME = address_manipulation
 
 DOT_O = _objFiles
-
-SRC = main.cpp\
-
-OBJ = $(addprefix $(DOT_O) $(SCR:.cpp=.o))
 
 CC = c++
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
+SRC = main.cpp\
+
+OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
+
 all: $(DOT_O) $(NAME)
 
-$(DOT_O)/%.o: $(SRC)/%.c | $(DOT_O)
-	$(PURPLE) COMPILING MINISHELL... $(RESET)
+$(DOT_O):
+	@mkdir -p $(DOT_O)
+
+$(DOT_O)/%.o: %.cpp | $(DOT_O)
+	$(PURPLE) COMPILING CPP... $(RESET)
 	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 	@$(CC) $(CPPFLAGS) -c $< -o $@
 	
-$(NAME) : $(OBJ)
+$(NAME): $(OBJ)
 	@echo $(PURPLE)
 	@echo "COMPILING CPP"
 	@echo $(RESET)
-	@clear
 	@$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 	@echo $(GREEN)
 	@echo "--------------------------"
 	@echo "|                        |"
-	@echo "|   READY TO USE CPP 	 |"
+	@echo "|    READY TO USE CPP    |"
 	@echo "|                        |"
 	@echo "--------------------------"
 	@echo $(RESET)
 
 clean:
 	$(CYAN) "\n cleaning everything...\n" $(RESET)
-	@rm -f $(OBJ)
+	@rm -f $(OBJS)
+	@rm -rf $(DOT_O)
 
-fclean:
+fclean: clean
 	@clear
 	@rm -f $(NAME)
+	@rm -rf $(DOT_O)
 
 re: fclean all
 

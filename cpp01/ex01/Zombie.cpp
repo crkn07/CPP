@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:00:36 by crtorres          #+#    #+#             */
-/*   Updated: 2024/02/22 18:12:12 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/05/28 15:18:44 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Zombie::Zombie(std::string name){
 }
 
 Zombie::~Zombie(void){
-	std::cout << this->name << "was slayed" << std::endl;
+	std::cout << this->name << " was slayed" << std::endl;
 	return ;
 }
 

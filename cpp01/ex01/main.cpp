@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:19:35 by crtorres          #+#    #+#             */
-/*   Updated: 2024/02/22 18:21:32 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/05/28 15:40:56 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	main(){
 	Zombie *horde;
-	int	num = 30;
+	int	num = 3;
 
-	horde = zombieHorde(num, "Zombie1");
+	horde = zombieHorde(num, "Zombie");
 	delete[] horde;
 	return 0;
 }

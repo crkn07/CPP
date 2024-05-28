@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/02/22 14:53:02 by crtorres          #+#    #+#              #
-#    Updated: 2024/05/28 12:03:11 by crtorres         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = zombies
 
 DOT_O = _objFiles
@@ -20,7 +8,8 @@ CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp\
 	Zombie.cpp\
-	zombieHorde.cpp\
+	newZombie.cpp\
+	randomChump.cpp\
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 
