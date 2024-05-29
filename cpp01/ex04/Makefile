@@ -1,4 +1,4 @@
-NAME = Unnecesary_violence
+NAME = Sed
 
 DOT_O = _objFiles
 
@@ -7,9 +7,6 @@ CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp\
-	HumanA.cpp\
-	HumanB.cpp\
-	Weapon.cpp\
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 
