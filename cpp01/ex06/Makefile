@@ -1,4 +1,4 @@
-NAME = Harl
+NAME = HarlFilter
 
 DOT_O = _objFiles
 

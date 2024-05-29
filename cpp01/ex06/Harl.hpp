@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/29 15:31:19 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/05/29 16:29:11 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,18 @@
 # include <iostream>
 # include <string>
 
+class Harl
+{
+	public:
+		Harl();
+		~Harl();
+		void	complain(std::string level);
+	
+	private:
+		void		debug(void);
+		void		info(void);
+		void		warning(void);
+		void		error(void);
+};
+		
 #endif
