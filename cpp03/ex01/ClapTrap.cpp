@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/30 15:16:06 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/06/04 12:33:04 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 ClapTrap::ClapTrap() : _name("Default"), _hitpoints(10), _energy_points(10), _attack_damage(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << RED << "Default constructor called" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energy_points(10), _attack_damage(0)
 {
-	std::cout << this->_name << " ClapTrap constructor called" << std::endl;
+	std::cout << GREEN << this->_name << " ClapTrap constructor called" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &src)
 {
 	*this = src;
-	std::cout << this->_name << "constructor has been copied" << std::endl;
+	std::cout << LBLUE << this->_name << "constructor has been copied" << RESET << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &src)
@@ -40,27 +40,27 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &src)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "ClapTrap destructor " << this->_name << " has been destroyed." << std::endl;
+	std::cout << YELLOW << "ClapTrap destructor " << this->_name << " has been destroyed." << RESET << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target)
 {
 	if (this->_energy_points > 0 && this->_hitpoints > 0){
 		this->_energy_points--;
-		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
+		std::cout << CYAN << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attack_damage << " points of damage!" << RESET << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is out of energy points!" << std::endl;
+		std::cout << RED << "ClapTrap " << this->_name << " is out of energy points!" << RESET << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->_hitpoints > 0){
 		this->_hitpoints -= amount;
-		std::cout << "ClapTrap " << this->_name << " has taken " << amount << " points of damage!" << std::endl;
+		std::cout << LGREEN << "ClapTrap " << this->_name << " has taken " << amount << " points of damage!" << RESET << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is already dead!" << std::endl;
+		std::cout << RED << "ClapTrap " << this->_name << " is already dead!" << RESET << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -68,8 +68,8 @@ void ClapTrap::beRepaired(unsigned int amount)
 	if (this->_hitpoints > 0 && this->_energy_points > 0 && amount <= this->_energy_points){
 		this->_energy_points--;
 		this->_hitpoints += amount;
-		std::cout << "ClapTrap " << this->_name << " has been repaired for " << amount << " points!" << std::endl;
+		std::cout << MAGENTA << "ClapTrap " << this->_name << " has been repaired for " << amount << " points!" << RESET << std::endl;
 	}
 	else
-		std::cout << "ClapTrap " << this->_name << " is already dead!" << std::endl;
+		std::cout << ROSE << "ClapTrap " << this->_name << " is already dead!" << RESET << std::endl;
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrapp.cpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/30 16:35:26 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/06/04 12:34:40 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &src){
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << "ScavTrap destructor " << this->_name << " has been destroyed." << std::endl;
+    std::cout << ORANGE << "ScavTrap destructor " << this->_name << " has been destroyed." << RESET << std::endl;
 }
 
 void ScavTrap::attack(const std::string &target)
