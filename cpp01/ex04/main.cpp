@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:19:35 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/29 14:56:52 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/08/13 18:07:08 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
