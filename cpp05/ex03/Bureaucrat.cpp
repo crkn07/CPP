@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/22 16:25:45 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/08/22 14:02:31 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Bureaucrat::Bureaucrat() : _name("Default"), _grade(150){
 }
 
 Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name){
-	std::cout << GREEN << "Bureaucrat Constructor called" << RESET << std::endl;
+	std::cout << ROSE << "Bureaucrat Parametric constructor called" << RESET << std::endl;
 	CheckGrade(grade);
 	_grade = grade;
 }
@@ -39,7 +39,7 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src){
 }
 
 Bureaucrat::~Bureaucrat(){
-	std::cout << RED << "Bureaucrat Destructor called" << RESET <<std::endl;
+	std::cout << RED << "Bureaucrat Destructor called" << RESET << std::endl;
 	return ;
 }
 

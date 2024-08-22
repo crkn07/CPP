@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/22 16:56:39 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/08/22 15:09:50 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src) :
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &src){
 	std::cout << BLUE << "ShrubberyCreationForm assignation operator called" << RESET << std::endl;
-	if (this != &src) {
+	if (this != &src){
 		Aform::operator=(src);
 		_target = src._target;
 	}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/21 12:24:32 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/08/21 12:46:54 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Form {
 	private:
 		const std::string _name;
 		bool _signed;
-		const int _gradeToSign;
-		const        int _gradeToExecute;
+		const int	_gradeToSign;
+		const int	_gradeToExecute;
 		void CheckGrade(int grade);
 		void CheckSigned(bool signedStatus);
 

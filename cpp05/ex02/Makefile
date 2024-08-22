@@ -8,6 +8,10 @@ CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp\
 		Bureaucrat.cpp\
+		Aform.cpp\
+		ShrubberyCreationForm.cpp\
+		RobotomyRequestForm.cpp\
+		PresidentialPardonForm.cpp\
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 

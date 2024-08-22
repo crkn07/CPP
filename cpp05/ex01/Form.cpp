@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/13 20:10:46 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/08/21 13:24:22 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ Form::Form(const Form &src) : _name(src._name), _signed(src._signed), _gradeToSi
 Form &Form::operator=(const Form &src){
 	if (this != &src) {
 		_signed = src._signed;
-		_gradeToSign = src._gradeToSign;
-		_gradeToExecute = src._gradeToExecute;
 		CheckGrade(_gradeToSign);
 		CheckGrade(_gradeToExecute);
 	}

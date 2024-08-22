@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/22 16:55:42 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/08/22 15:08:37 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src) : Aform
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &src){
 	std::cout << BLUE << "RobotomyRequestForm assignation operator." << RESET << std::endl;
-	if (this != &src) {
+	if (this != &src){
 		Aform::operator=(src);
 		_target = src._target;
 	}

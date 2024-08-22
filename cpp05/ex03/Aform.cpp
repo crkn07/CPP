@@ -6,32 +6,32 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/22 16:53:24 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/08/22 14:01:04 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Aform.hpp"
 
 Aform::Aform() : _name("Default"), _signed(false), _gradeToSign(150), _gradeToExecute(150){
-	std::cout << YELLOW << "Aform default constructor called" << RESET << std::endl;
+	std::cout << YELLOW << "Aform Default constructor called" << RESET << std::endl;
 	return ;
 }
 
 Aform::Aform(const std::string name, int gradeToSign, int gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute){
-	std::cout << GREEN << "Aform parametric constructor called" << RESET << std::endl;
+	std::cout << ROSE << "Aform Parametric constructor called" << RESET << std::endl;
 	CheckGrade(gradeToSign);
 	CheckGrade(gradeToExecute);
 	_signed = false;
 }
 
 Aform::Aform(const Aform &src) : _name(src._name), _signed(src._signed), _gradeToSign(src._gradeToSign), _gradeToExecute(src._gradeToExecute){
-	std::cout << ORANGE << "Aform copy constructor called" << RESET << std::endl;
+	std::cout << ORANGE << "Aform Copy constructor called" << RESET << std::endl;
 	CheckGrade(_gradeToSign);
 	CheckGrade(_gradeToExecute);
 }
 
 Aform &Aform::operator=(const Aform &src){
-	std::cout << BLUE << "Aform assignation operator called" << RESET << std::endl;
+	std::cout << BLUE << "Aform Assignation operator called" << RESET << std::endl;
 	if (this != &src) {
 		_signed = src._signed;
 		CheckGrade(_gradeToSign);
@@ -41,7 +41,7 @@ Aform &Aform::operator=(const Aform &src){
 }
 
 Aform::~Aform(){
-	std::cout << RED << "Aform destructor called" << RESET << std::endl;
+	std::cout << RED << "Aform Destructor called" << RESET << std::endl;
 	return ;
 }
 

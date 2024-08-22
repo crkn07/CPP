@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/22 16:54:44 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/08/22 14:03:28 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Afor
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src) : Aform(src){
-	std::cout << GREEN << "PresidentialPardonForm copy constructor called" << RESET << std::endl;
+	std::cout << ORANGE << "PresidentialPardonForm copy constructor called" << RESET << std::endl;
 	_target = src._target;
 	return ;
 }
