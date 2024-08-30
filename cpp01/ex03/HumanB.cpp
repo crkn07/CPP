@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:19:35 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/29 12:35:19 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/08/23 17:16:14 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string const name): name(name){
+HumanB::HumanB(std::string const name): _name(name){
     return;
 }
 
 void HumanB::attack(){
-    std::cout << name << " attacks with his " << weapon->getType() << std::endl;
+    std::cout << _name << " attacks with his " << weapon->getType() << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &weapon){
@@ -25,6 +25,6 @@ void HumanB::setWeapon(Weapon &weapon){
 }
 
 HumanB::~HumanB(){
-    std::cout << this->name <<" was destroyed" << std::endl;
+    std::cout << _name <<" was destroyed" << std::endl;
     return;
 }

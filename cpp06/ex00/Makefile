@@ -1,4 +1,4 @@
-NAME = UnnecesaryViolence
+NAME = Bureaucrat
 
 DOT_O = _objFiles
 
@@ -7,9 +7,7 @@ CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp\
-	HumanA.cpp\
-	HumanB.cpp\
-	Weapon.cpp\
+		ScalarConverter.cpp\
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 
@@ -30,9 +28,8 @@ $(NAME): $(OBJ)
 	@$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 	@echo $(GREEN)
 	@echo "--------------------------"
-	@echo "|                        |"
+	@echo "|      Abstract class    |"
 	@echo "|    READY TO USE CPP    |"
-	@echo "|                        |"
 	@echo "--------------------------"
 	@echo $(RESET)
 
