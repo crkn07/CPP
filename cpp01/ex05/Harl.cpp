@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/05/29 16:33:46 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/09/02 15:51:14 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	std::string levels[4] = {"debug", "info", "warning", "error"};
+	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int i = 0;
 	for (i = 0; i < 4; i++)
 	{
@@ -71,7 +71,7 @@ void	Harl::complain(std::string level)
 			this->error();
 			break;
 		default:
-			std::cout << "Wrong option." << std::endl;
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 			break;
 	}
 }

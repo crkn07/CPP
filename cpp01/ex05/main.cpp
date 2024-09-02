@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/13 18:16:50 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/09/02 15:59:41 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int main()
 {
     Harl harl;
-    harl.complain("debug");
-    harl.complain("info");
-    harl.complain("warning");
-    harl.complain("error");
-    harl.complain("wrong");
+    harl.complain("DEBUG");
+    harl.complain("INFO");
+    harl.complain("WARNING");
+    harl.complain("ERROR");
+    harl.complain("WRONG");
     return 0;
 }
