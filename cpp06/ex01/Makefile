@@ -1,4 +1,4 @@
-NAME = conver
+NAME = Serialize
 
 DOT_O = _objFiles
 
@@ -7,7 +7,7 @@ CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp\
-		ScalarConverter.cpp\
+		Serialize.cpp\
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 

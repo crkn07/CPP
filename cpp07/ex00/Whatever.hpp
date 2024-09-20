@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/09/12 16:28:52 by cristiantor      ###   ########.fr       */
+/*   Created: 2024/09/17 09:51:00 by cristiantor       #+#    #+#             */
+/*   Updated: 2024/09/17 15:24:21 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
+#include <iostream>
+#include <string>
 
-int main(int argc, char **argv) {
-    if (argc != 2) {
-        std::cerr << RED << "Error: Invalid number of arguments" << RESET << std::endl;
-        return 1;
-    }
-    ScalarConverter::convert(argv[1]);
-    return 0;
+template <typename Template>
+
+void	swap(Template &a, Template &b){
+	Template tmp = a;
+	a = b;
+	b = tmp;
 }
+
+template <typename Template>
+Template	min(Template a, Template b){
+	return (a < b ? a : b);
+}
+
+template <typename Template>
+Template	max(Template a, Template b){
+	return (a > b ? a : b);
+}
+
+#endif

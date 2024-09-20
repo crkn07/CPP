@@ -6,17 +6,26 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/09/12 16:28:52 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/09/13 08:07:46 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Serialize.hpp"
 
-int main(int argc, char **argv) {
-    if (argc != 2) {
-        std::cerr << RED << "Error: Invalid number of arguments" << RESET << std::endl;
-        return 1;
-    }
-    ScalarConverter::convert(argv[1]);
+int main() {
+    Data myStruct;
+    myStruct.name = 'H';
+    myStruct.n = 42;
+    myStruct.value = 42.0f;
+
+    uintptr_t value = Serialize::serialize(&myStruct);
+    std::cout << "The value of myStruct is " << value << std::endl;
+
+    Data* anotherStruct = reinterpret_cast<Data*>(value);
+    std::cout << "The address of myStruct is: " << &myStruct << std::endl;
+    std::cout << "The address of anotherStruct is: " << anotherStruct << std::endl;
+    std::cout << "Result: " << (memcmp(anotherStruct, &myStruct, sizeof(*anotherStruct)) == 0
+            ? "Addresses are identical"
+            : "Addresses are different") << std::endl;
     return 0;
 }

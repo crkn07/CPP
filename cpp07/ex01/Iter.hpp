@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/09/12 16:28:52 by cristiantor      ###   ########.fr       */
+/*   Created: 2024/09/17 10:17:16 by cristiantor       #+#    #+#             */
+/*   Updated: 2024/09/17 15:23:55 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef ITER_HPP
+# define ITER_HPP
+#include <iostream>
 
-int main(int argc, char **argv) {
-    if (argc != 2) {
-        std::cerr << RED << "Error: Invalid number of arguments" << RESET << std::endl;
-        return 1;
-    }
-    ScalarConverter::convert(argv[1]);
-    return 0;
+template <typename Template, typename Func>
+void	iter(Template *array, size_t length, Func function){
+	for (size_t i = 0; i < length; i++){
+		function(array[i]);
+	}
 }
+
+template <typename Template>
+void	printarray(Template const &element){
+	std::cout << element << std::endl;
+}
+
+#endif

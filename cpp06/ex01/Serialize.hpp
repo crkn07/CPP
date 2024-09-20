@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Serialize.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/09/12 16:14:20 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/09/13 07:50:26 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-# define SCALARCONVERTER_HPP
+#ifndef SERIALIZE_HPP
+# define SERIALIZE_HPP
 
 #include <iostream>
 #include <string>
@@ -35,25 +35,22 @@
 # define PURPLE  "\x1B[38;2;129;38;192m"
 # define RESET   "\x1b[0m"
 
-class ScalarConverter {
-	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter &src);
-		ScalarConverter &operator=(const ScalarConverter &b);
-	public:
-		static void convert(const std::string &input);
-		~ScalarConverter();
+struct Data
+{
+	int     n;
+	float   value;
+	std::string name;
+};
 
-		std::string _input;
-		bool isChar();
-		bool isInt();
-		bool isFloat();
-		bool isDouble();
-		void convert();
-		void printChar();
-		void printInt();
-		void printFloat();
-		void printDouble();
+class Serialize {
+	private:
+		Serialize();
+		Serialize(const Serialize &src);
+		Serialize &operator=(const Serialize &b);
+		~Serialize();
+	public:
+		static uintptr_t serialize(Data *raw);
+		static Data *deserialize(uintptr_t raw);
 };
 
 #endif

@@ -1,4 +1,4 @@
-NAME = conver
+NAME = Iter
 
 DOT_O = _objFiles
 
@@ -7,7 +7,6 @@ CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 SRC = main.cpp\
-		ScalarConverter.cpp\
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 

@@ -5,18 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/09/12 16:28:52 by cristiantor      ###   ########.fr       */
+/*   Created: 2024/09/17 10:29:21 by cristiantor       #+#    #+#             */
+/*   Updated: 2024/09/17 15:23:35 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Iter.hpp"
 
-int main(int argc, char **argv) {
-    if (argc != 2) {
-        std::cerr << RED << "Error: Invalid number of arguments" << RESET << std::endl;
-        return 1;
-    }
-    ScalarConverter::convert(argv[1]);
-    return 0;
+int main(){
+	int array[] = {1, 2, 3, 4, 5};
+	char array2[] = {'a', 'b', 'c', 'd', 'e'};
+	float array3[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+
+	iter(array, 5, printarray<int>);
+	iter(array2, 5, printarray<char>);
+	iter(array3, 5, printarray<float>);
+
+	return (0);
 }
