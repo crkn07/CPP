@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:22:35 by cristiantor       #+#    #+#             */
-/*   Updated: 2024/09/17 16:03:48 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/09/20 16:15:39 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Span{
 		void printVector();
 		class   FullorNoVectorException : public std::exception{
 			public:
-				const char *what() const throw(){};
+				const char *what() const throw();
 		};
 		class   NotEnoughNumbersException : public std::exception{
 			public:

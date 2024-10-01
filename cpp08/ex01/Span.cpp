@@ -6,7 +6,7 @@
 /*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:22:31 by cristiantor       #+#    #+#             */
-/*   Updated: 2024/09/20 15:47:38 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/09/20 16:15:17 by cristiantor      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ Span &Span::operator=(const Span &src){
 
 Span::~Span() {}
 
+const   char *Span::FullorNoVectorException::what() const throw(){
+    return ("Vector is full or empty\n");
+}
 void Span::addNumber(int number){
     if (_vec.size() < _n){
         _vec.push_back(number);
@@ -66,4 +69,11 @@ int Span::longestSpan(){
     std::vector<int> sorted = _vec;
     std::sort(sorted.begin(), sorted.end());
     return (sorted[sorted.size() - 1] - sorted[0]);
+}
+
+void Span::printVector(){
+    for (size_t i = 0; i < _vec.size(); i++){
+        std::cout << _vec[i] << " ";
+    }
+    std::cout << std::endl;
 }
