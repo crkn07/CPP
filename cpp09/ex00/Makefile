@@ -1,4 +1,4 @@
-NAME = Easyfind
+NAME = btc
 
 DOT_O = _objFiles
 

@@ -1,4 +1,4 @@
-NAME = Easyfind
+NAME = MutantStack
 
 DOT_O = _objFiles
 

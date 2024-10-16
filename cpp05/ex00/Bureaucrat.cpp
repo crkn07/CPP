@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
+/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/08/13 19:34:34 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/09/26 12:47:18 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

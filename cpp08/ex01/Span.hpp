@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cristiantorres <cristiantorres@student.    +#+  +:+       +#+        */
+/*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:22:35 by cristiantor       #+#    #+#             */
-/*   Updated: 2024/09/20 16:15:39 by cristiantor      ###   ########.fr       */
+/*   Updated: 2024/10/16 10:05:12 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ class Span{
 		void printVector();
 		class   FullorNoVectorException : public std::exception{
 			public:
-				const char *what() const throw();
+				virtual const char *what() const throw(){
+					return ("Vector is full or not enough space");
+				}
 		};
 		class   NotEnoughNumbersException : public std::exception{
 			public:
