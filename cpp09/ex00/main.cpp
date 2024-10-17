@@ -6,40 +6,38 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 08:59:00 by crtorres          #+#    #+#             */
-/*   Updated: 2024/10/16 09:21:58 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/10/17 09:45:08 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MutantStack.hpp"
+#include "BitcoinExchange.hpp"
 
-int main(){
-    MutantStack<int> mstack;
+void	conversion(BitCoinExchange& historyValue, std::ifstream& inputFile)
+{
+	std::string	line;
+	while (std::getline(inputFile, line))
+	{
+		std::string date = line.substr(0, 10);
+		float exchangeRate = strToNum<float>(line.substr(line.find("|") + 1));
+		if (!errorLog(date, exchangeRate))
+			historyValue.getConversion(date, exchangeRate);
+	}
+}
 
-    mstack.push(5);
-    mstack.push(17);
-
-    std::cout << "Top: " << mstack.top() << std::endl;
-
-    mstack.pop();
-
-    std::cout << "Size: " << mstack.size() << std::endl;
-
-    mstack.push(3);
-    mstack.push(5);
-    mstack.push(737);
-    mstack.push(0);
-
-    MutantStack<int>::iterator it = mstack.begin();
-    MutantStack<int>::iterator ite = mstack.end();
-
-    ++it;
-    --it;
-    while (it != ite){
-        std::cout << *it << std::endl;
-        ++it;
-    }
-
-    std::stack<int> s(mstack);
-
-    return 0;
+int	main(int argc, char **argv){
+	if (argc != 2)
+	{
+		std::cerr << "Usage: need a file as argument" << std::endl;
+		return 1;
+	}
+	std::ifstream database("./data.csv");
+	if (!(database.is_open() && database.good()))
+	{
+		std::cerr << "Error: could not open the file" << std::endl;
+		return 1;
+	}
+	BitCoinExchange historyValue(database);
+	std::ifstream inputFile(argv[1]);
+	conversion(historyValue, inputFile);
+	return 0;
 }

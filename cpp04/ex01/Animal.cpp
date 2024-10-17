@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 18:35:56 by crtorres          #+#    #+#             */
-/*   Updated: 2024/06/13 15:56:02 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/10/17 11:52:15 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Animal	&Animal::operator=(const Animal &src){
 }
 
 const std::string	Animal::getType() const{
-	std::cout << "Animal getType called" << std::endl;
 	return (this->_type);
 }
 

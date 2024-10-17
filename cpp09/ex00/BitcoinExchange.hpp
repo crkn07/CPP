@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 08:59:00 by crtorres          #+#    #+#             */
-/*   Updated: 2024/10/16 11:58:33 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/10/17 09:48:57 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ class   BitCoinExchange
         BitCoinExchange();
         BitCoinExchange(BitCoinExchange const & src);
         BitCoinExchange & operator=(BitCoinExchange const & src);
-        ~BitCoinExchange();
         
     public:
         BitCoinExchange(std::ifstream& database);
+        ~BitCoinExchange();
         void    getConversion(std::string currency, float exchangeRate);
 };
 

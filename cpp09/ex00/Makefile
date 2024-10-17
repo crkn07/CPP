@@ -6,7 +6,8 @@ CC = c++
 
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp\
+SRC = main.cpp \
+		BitcoinExchange.cpp \
 
 OBJ = $(addprefix $(DOT_O)/, $(SRC:%.cpp=%.o))
 
