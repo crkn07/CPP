@@ -6,7 +6,7 @@
 /*   By: crtorres <crtorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 08:59:00 by crtorres          #+#    #+#             */
-/*   Updated: 2024/10/17 12:55:01 by crtorres         ###   ########.fr       */
+/*   Updated: 2024/10/22 11:37:55 by crtorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define RPN_HPP
 
 # include <stack>
+# include <iostream>
 # include <string>
 
 class RPN : public std::stack<int>{
